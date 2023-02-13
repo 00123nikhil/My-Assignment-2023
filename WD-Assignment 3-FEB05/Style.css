@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+/* !Logo and nav */
+.left {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20px;
+}
+
+.logo {
+  margin-right: 10px;
+  border-right-style: ridge;
+}
+.logo img {
+  height: 50px;
+  margin: 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+
+.btn1 {
+  padding: 10px 40px;
+  margin: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: darkmagenta;
+  color: white;
+}
+
+/* section started */
+body {
+  background-image: url(./Images/img3.webp);
+  background-size: cover;
+}
+
+section {
+  text-align: center;
+  /* height: 100vh; */
+  padding: 20px;
+  margin-top: 70px;
+  /* align-items: center; */
+}
+
+.heading {
+  /* border: 2px solid red; */
+}
+
+.heading h1 {
+  font-size: 4rem;
+}
+.heading p {
+  font-size: 1.5rem;
+}
+
+.btn2 button {
+  padding: 10px 20px;
+  margin: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: darkmagenta;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+/* !Button Hover applied */
+.btn1:hover {
+  background-color: white;
+  color: magenta;
+  /* border: 3px solid magenta; */
+}
+
+.btn2 button:hover {
+  background-color: white;
+  color: magenta;
+  /* border: 3px solid white; */
+}

@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Itim", cursive;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7) url(./Assets/A-image1.png);
+  background-blend-mode: darken;
+  /* background-image: url(./Assets/A-image1.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: goldenrod;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 25px;
+}
+
+header div ul {
+  display: flex;
+  justify-content: center;
+}
+
+header ul li {
+  margin: 10px 30px;
+}
+
+header div img {
+  max-width: 100px;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn1 button {
+  padding: 10px 30px;
+  background: #e3645b;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+}
+
+/* !!!--------Main Section ------------!!! */
+.Main {
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+}
+
+.Main h1 {
+  padding: 20px 90px;
+  margin: 10px 250px;
+  font-size: 96px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+/* *Button  */
+div button {
+  padding: 18px 50px;
+  background: #e3645b;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+}
+
+.scroll {
+  width: 100%;
+  height: 100px;
+  padding: 35px 10px;
+}
+.scroll img {
+  float: right;
+  padding: 10px;
+  height: 150px;
+  width: 150px;
+}
