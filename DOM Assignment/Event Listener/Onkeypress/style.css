@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(to right, #f09819, #ff512f);
+  background: linear-gradient(to right, #f09819, #ff512f);
+}
+
+#display {
+  color: red;
+  padding: 10px;
+  
+}
+
+#input {
+  font-size: 25px;
+  padding: 15px 45px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px white;
+  background-color: black;
+  color: wheat;
+}

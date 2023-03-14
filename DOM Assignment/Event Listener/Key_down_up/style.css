@@ -1,0 +1,19 @@
+body {
+  height: 100vh;
+  background: -webkit-linear-gradient(to right, #f09819, #ff512f);
+  background: linear-gradient(to right, #f09819, #ff512f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container {
+  border: 2px solid black;
+  padding: 20px 35px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px white;
+}
+
+#display {
+  font-size: 45px;
+}
