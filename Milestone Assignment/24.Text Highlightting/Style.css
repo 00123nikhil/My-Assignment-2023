@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+  background: linear-gradient(to right, #3f2b96, #a8c0ff);
+}
+.container {
+  padding: 25px;
+  height: 350px;
+  width: 700px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px white;
+}
+.container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+.container p {
+  line-height: 1.8;
+  word-spacing: 2px;
+  color: rgb(101, 97, 97);
+}
+.container h4 {
+  margin-top: 20px;
+  color: yellow;
+}
