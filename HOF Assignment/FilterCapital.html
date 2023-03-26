@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering and Captilizing |HOF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+            background: linear-gradient(to right, #3f2b96, #a8c0ff);
+        }
+
+        /* container css*/
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 20px 50px;
+            background-color: black;
+            border: 2px solid white;
+            height: 300px;
+            width: 1100px;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #515a51;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Filtering and Capitalizing</h2>
+        <h3>Filtered Books</h3>
+        <table id="book-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publication Year</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- javascript added here -->
+    <script src="script.js"></script>
+    <script>
+        // creating object for input here
+        const books = [
+            { title: "game Of Thrones", author: "SSD", year: 2008 },
+            { title: "Harry Potter", author: "GGG", year: 2005 },
+            { title: "The great Wall", author: "GNB", year: 1813 },
+            { title: "The Avengers", author: "ANB", year: 1960 },
+            { title: "John Wick 4", author: "FNB", year: 1925 },
+            { title: "Doctor Stranger 2", author: "NNB", year: 1951 }
+        ];
+
+        // Filter out books published before 2010 and capitalize author names
+        const filteredBooks = books
+            .filter(book => book.year >= 2005)
+            .map(book => {
+                return {
+                    // rest op
+                    ...book,
+                    author: book.author.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
+                }
+            });
+
+        // add in html table to show on webpage
+        const BT = document.getElementById("book-table");
+        const tbody = BT.querySelector("tbody");
+
+        filteredBooks.forEach(book => {
+            const row = document.createElement("tr");
+            const TCell = document.createElement("td");
+            const ACell = document.createElement("td");
+            const yearCell = document.createElement("td");
+
+            TCell.textContent = book.title;
+            ACell.textContent = book.author;
+            yearCell.textContent = book.year;
+
+            row.appendChild(TCell);
+            row.appendChild(ACell);
+            row.appendChild(yearCell);
+
+            tbody.appendChild(row);
+        });
+
+    </script>
+
+</body>
+
+</html>

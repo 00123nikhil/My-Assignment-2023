@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profile URL Validator|HOF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+            background: linear-gradient(to right, #3f2b96, #a8c0ff);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 20px 50px;
+            background-color: black;
+            border: 2px solid white;
+            height: 300px;
+            width: 650px;
+            color: white;
+        }
+
+        .container input {
+            padding: 08px 5rem;
+            border-radius: 10px;
+        }
+
+        .container button {
+            padding: 10px 2rem;
+            background-color: bisque;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>LinkedIn Profile URL Validator</h2>
+        <input type="text" id="url-input" />
+        <button onclick="checkURL()">Check URL</button>
+
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+        function checkURL() {
+            const Input = document.getElementById("url-input").value;
+
+            const urlRegex = /^https:\/\/www\.linkedin\.com\/in\/[\w-]{5,30}\d?$/;
+
+            const CheckURL = urlRegex.test(Input);
+
+            const resultElement = document.getElementById("result");
+
+            if (CheckURL) {
+                resultElement.innerText = "Valid Linkedin Url";
+            } else {
+                resultElement.innerText = "Invalid Linkedin Url";
+            }
+        }
+    </script>
+</body>
+
+</html>

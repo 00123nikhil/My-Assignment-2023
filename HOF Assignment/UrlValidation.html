@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Validation|HOF</title>
+    <!-- styling here -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+            background: linear-gradient(to right, #3f2b96, #a8c0ff);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 20px 50px;
+            background-color: black;
+            border: 2px solid white;
+            height: 300px;
+            width: 500px;
+            color: white;
+        }
+
+        .container input {
+            padding: 08px 5rem;
+            border-radius: 10px;
+        }
+
+        .container button {
+            padding: 10px 2rem;
+            background-color: bisque;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>URL Validation|HOF</h2>
+        <input type="text" id="url-input" placeholder="Type your Url here..." />
+        <button onclick="URLValidation()">Check URL</button>
+
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+        function URLValidation() {
+            const urlInput = document.getElementById("url-input").value;
+
+            try {
+                const url = new URL(urlInput);
+
+                document.getElementById("result").innerText = "Valid URL";
+            } catch (error) {
+                document.getElementById("result").innerText = "Invalid URL";
+            }
+        }
+    </script>
+</body>
+
+</html>
